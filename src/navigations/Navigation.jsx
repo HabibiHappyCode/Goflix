@@ -34,7 +34,7 @@ function Navigation() {
 
 
     return (
-        <header className={`py-4 px-15 w-full flex justify-between items-center max-[768px]:px-5 sticky top-0 ${scrollStyle}`}>
+        <header className={`py-4 px-15 w-full flex justify-between items-center max-[768px]:px-5 fixed top-0 z-1 ${scrollStyle}`}>
             <h1 className='uppercase text-[1.7em] font-light  text-[#FFD93D] max-md:text-[1.3em]'>goflix</h1>
 
             <nav className=' w-1/2 relative flex justify-center max-[768px]:justify-start'>
