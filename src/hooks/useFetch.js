@@ -23,7 +23,7 @@ export function useFetch(fetchedFunc) {
     // }, []);
 
     const {data: fetchedData = [], error, isLoading} = useQuery({
-        queryKey: ['movies'],
+        queryKey: [''],
          queryFn: fetchedFunc 
         
         })

@@ -5,10 +5,15 @@ export async function fetchingLandPageData() {
     if (!response.ok) {
         throw new Error("there is an error in fetching data");
     }
+    return resData.results
+}
 
-    const randomNum  = Math.floor( Math.random() * resData.results.length )
-    console.log(randomNum)
+export async function fetchingTopTenData() {
+    const response = await fetch("https://api.themoviedb.org/3/trending/tv/day?api_key=feb5c0d6f258fa2a47b5828787b5f9b9");
+    const resData = await response.json();
 
-
-    return resData.results[randomNum]
+    if (!response.ok) {
+        throw new Error("there is an error in fetching data");
+    }
+    return resData.results
 }

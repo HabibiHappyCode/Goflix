@@ -12,7 +12,7 @@ function SearchBar() {
 
     let styles = "flex justify-end items-center w-1/4  py-1 pr-5 rounded max-[768px]:w-full '"
     if (toggleSearch) {
-        styles += ' w-1/4 bg-[#141414]/80 py-1 pr-5'
+        styles += ' w-1/4 bg-[#141414]/80 py-1 pr-5 border border-white'
     }
     return (
         <div className={styles}>
