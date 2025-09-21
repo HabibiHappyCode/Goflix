@@ -2,42 +2,38 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useFetch } from '../../hooks/useFetch'
-import { fetchingTopTenData } from '../../lib'
+import { fetchingNewAndPopularData } from '../../lib'
 import { useSlides } from "../../hooks/useSlides"
 import { Skeleton } from "@mui/material";
 
-
-function TopTen() {
-
-    const { fetchedData, isLoading } = useFetch(fetchingTopTenData, [])
-    const slicedData = fetchedData.slice(0, 10);
-
+function New_Popular() {
+    const { fetchedData, isLoading } = useFetch(fetchingNewAndPopularData, []);
+    const sortedData = fetchedData.sort((a, b) => Math.random() - 0.5)
     const { settings } = useSlides()
-
     return (
         <div className='h-full w-full px-9 pb-15 max-[768px]:pb-8 max-[768px]:px-5'>
             <section>
                 {
                     isLoading ?
-                        <Skeleton width="70%" height="5vh" style={{ marginBottom: "10px" }} />
+                        <Skeleton width="70%" height="5vh" style={{ marginTop: "25px" }} />
                         :
                         <h2 className='font-medium text-[1.2em] max-[768px]:text-[1em] tracking-wider mb-2'>
-                            Top Ten Shows in Nigeria
+                            New and Popular
                         </h2>
                 }
-
                 {
                     isLoading ?
                         <div className="flex justify-between gap-5">
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
                         </div>
                         :
+
                         <Slider {...settings}>
                             {
-                                slicedData.map((data) => {
+                                sortedData.map((data) => {
                                     return (
                                         <div className="hidden rounded">
                                             <main key={data.id} className='w-[96%] h-[250px] max-[630px]:h-[200px] relative rounded'>
@@ -61,4 +57,4 @@ function TopTen() {
     )
 }
 
-export default TopTen
+export default New_Popular

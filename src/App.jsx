@@ -9,7 +9,8 @@ import NewsPopular from './Routes/news_popular/NewsPopular'
 function App() {
 
   return (
-    <div >
+    <div className='relative' >
+      {/* navigations */}
       <Navigation />
 
       {/* routes */}

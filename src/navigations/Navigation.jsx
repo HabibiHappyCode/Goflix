@@ -49,10 +49,10 @@ function Navigation() {
                 </p>
 
                 <ul className={styles}>
-                    <li className='hover:text-[#FFD93D]  transition ease-in duration-100  max-[768px]:py-5'><Link to='/'>home</Link></li>
-                    <li className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/shows'>shows</Link></li>
-                    <li className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/movies'>movies</Link></li>
-                    <li className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/news_popular'>news & popular</Link></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100  max-[768px]:py-5'><Link to='/'>home</Link></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/shows'>shows</Link></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/movies'>movies</Link></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/news_popular'>new & popular</Link></li>
                 </ul>
             </nav>
 

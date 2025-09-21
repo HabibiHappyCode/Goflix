@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
 
-export function useFetch(fetchedFunc) {
+export function useFetch(fetchedFunc, initialValue) {
 
     // const [fetchedData, setFetchedData] = useState([]);
     // const [isLoading, setIsloading] = useState(false);
@@ -22,7 +22,7 @@ export function useFetch(fetchedFunc) {
     //     fetchFunc();
     // }, []);
 
-    const {data: fetchedData = [], error, isLoading} = useQuery({
+    const {data: fetchedData = initialValue, error, isLoading} = useQuery({
         queryKey: [''],
          queryFn: fetchedFunc 
         

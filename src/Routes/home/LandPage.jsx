@@ -7,7 +7,7 @@ import HomeSkeleton from './HomeSkeleton';
 
 function LandPage() {
 
-    const { fetchedData, isLoading } = useFetch(fetchingLandPageData);
+    const { fetchedData, isLoading } = useFetch(fetchingLandPageData, []);
 
     const randomData = Math.floor(Math.random() * fetchedData.length)
 
