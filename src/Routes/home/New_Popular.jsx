@@ -15,7 +15,7 @@ function New_Popular() {
             <section>
                 {
                     isLoading ?
-                        <Skeleton width="70%" height="5vh" style={{ marginTop: "25px" }} />
+                        <Skeleton width="70%" height="5vh" style={{ marginTop: "25px" }} sx={{ bgcolor: 'grey.900' }} />
                         :
                         <h2 className='font-medium text-[1.2em] max-[768px]:text-[1em] tracking-wider mb-2'>
                             New and Popular
@@ -24,10 +24,10 @@ function New_Popular() {
                 {
                     isLoading ?
                         <div className="flex justify-between gap-5">
-                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh" style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
                         </div>
                         :
 
@@ -35,8 +35,8 @@ function New_Popular() {
                             {
                                 sortedData.map((data) => {
                                     return (
-                                        <div className="hidden rounded">
-                                            <main key={data.id} className='w-[96%] h-[250px] max-[630px]:h-[200px] relative rounded'>
+                                        <div className="hidden rounded"  key={data.id}>
+                                            <main className='w-[96%] h-[250px] max-[630px]:h-[200px] relative rounded'>
                                                 <img
                                                     className='w-full h-full object-cover w-[200px] h-full rounded'
                                                     src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}.svg`} alt='title'

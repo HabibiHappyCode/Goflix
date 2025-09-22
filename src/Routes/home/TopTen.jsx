@@ -19,7 +19,7 @@ function TopTen() {
             <section>
                 {
                     isLoading ?
-                        <Skeleton width="70%" height="5vh" style={{ marginBottom: "10px" }} />
+                        <Skeleton width="70%" height="5vh" style={{ marginBottom: "10px" }} sx={{ bgcolor: 'grey.900' }} />
                         :
                         <h2 className='font-medium text-[1.2em] max-[768px]:text-[1em] tracking-wider mb-2'>
                             Top Ten Shows in Nigeria
@@ -29,10 +29,10 @@ function TopTen() {
                 {
                     isLoading ?
                         <div className="flex justify-between gap-5">
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
-                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" />
+                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
+                            <Skeleton width="250px" height="60vh"  style={{ marginTop: -90, marginBottom: -150 }} animation="wave" sx={{ bgcolor: 'grey.900' }} />
                         </div>
                         :
                         <Slider {...settings}>
