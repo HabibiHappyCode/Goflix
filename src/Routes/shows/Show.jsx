@@ -3,7 +3,7 @@ import TvShows from './TvShows'
 
 function Show() {
     return (
-        <div className='absolute w-[100%] h-auto left-0 top-15 py-4 px-15 max-[768px]:px-5'>
+        <div className='absolute w-[100%] h-auto left-0 top-15 py-4 px-15 max-[768px]:px-'>
             <div className='w-full h-auto'>
                 <h1 className=' text-3xl max-[768px]:text-[19px]'>TV Shows</h1>
             </div>
