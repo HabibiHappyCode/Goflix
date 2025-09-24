@@ -28,7 +28,7 @@ function Navigation() {
 
     let scrollStyle
 
-    if (isScrolled >= 100) {
+    if (isScrolled >= 50) {
         scrollStyle = 'bg-[#000] transition ease-in-out duration-300'
     }
 
