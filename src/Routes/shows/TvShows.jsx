@@ -6,7 +6,6 @@ import { Skeleton } from '@mui/material';
 function TvShows() {
 
     const { fetchedData, isLoading } = useFetch(fetchingTvShowsData, []);
-    const sortedData = fetchedData.sort((a, b) => Math.random() - 0.5)
     const fillNum = Array(20).fill()
 
     return (
@@ -21,7 +20,7 @@ function TvShows() {
                         )
                     })
                     :
-                    sortedData.map((data) => {
+                    fetchedData.map((data) => {
                         return (
                             <main key={data.id} className='w-[19%] max-xl:w-[19%] max-md:w-[30%] max-md:w-[25%] max-sm:w-[49%] h-full relative rounded'>
                                 <img

@@ -5,7 +5,7 @@ import { Skeleton } from '@mui/material';
 function TvNewsPopular() {
 
     const { fetchedData, isLoading } = useFetch(fetchingNewAndPopular, []);
-        const fillNum = Array(20).fill()
+    const fillNum = Array(20).fill()
 
     return (
         <div className='w-full h-auto flex flex-wrap max-xl:justify-between gap-y-3 gap-x-3 max-xl:gap-x-0 mt-10 '>
