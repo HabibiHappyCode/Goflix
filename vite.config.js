@@ -4,16 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  theme: {
-    extend: {
-      fontFamily: {
-        myFont: ["Roboto", 'sans-serif']
-      }
-    }
-  },
   plugins: [
     react(),
     tailwindcss(),
   ],
 })
- 
