@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
 import { AiFillCaretDown } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
+import User from './User'
 
 function Navigation() {
 
     const [toggleClick, setToggleClick] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+
+   
 
     const handlePageScroll = () => {
         setIsScrolled(window.pageYOffset)
@@ -20,6 +23,11 @@ function Navigation() {
     const handleClickedCaret = () => {
         setToggleClick(prevState => !prevState)
     }
+
+   
+
+
+
 
     let styles = "flex items-center justify-center gap-8 font-semibold text-[14px] capitalize max-[768px]:absolute max-[768px]:flex-col max-[768px]:left-[-50%] max-[768px]:top-[200%] max-[768px]:bg-black/88 max-[768px]:w-1/1 max-[768px]:h-0 max-[768px]:overflow-hidden"
     if (toggleClick) {
@@ -58,6 +66,7 @@ function Navigation() {
 
             <SearchBar />
 
+          <User />
         </header>
     )
 }

@@ -9,16 +9,16 @@ const useAuthStore = create((set) => ({
   signUp: (userData, navigate) => {
     localStorage.setItem("user", JSON.stringify(userData));
     set({ user: userData, isLoggedIn: false, error: null });
-    navigate("/login");
+    navigate("/signIn");
   },
 
 
-  signIn: (username, password, navigate) => {
+  signIn: (email, password, navigate) => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
     if (
       savedUser &&
-      savedUser.username === username &&
+      savedUser.email === email &&
       savedUser.password === password
     ) {
       set({ user: savedUser, isLoggedIn: true, error: null });
