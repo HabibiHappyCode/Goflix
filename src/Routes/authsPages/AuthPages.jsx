@@ -2,8 +2,6 @@ import AuthLandingPages from './AuthLandingPages'
 import TopRatedMovies from '../home/TopRatedMovies'
 import Reasons from './Reasons'
 import Faqs from './Faqs'
-import { Link } from "react-router-dom"
-import { FaGreaterThan } from "react-icons/fa6";
 import Ready from './Ready'
 
 function AuthPages() {

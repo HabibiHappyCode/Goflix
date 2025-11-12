@@ -5,7 +5,7 @@ import { FaGreaterThan } from "react-icons/fa6";
 function AuthLandingPages() {
     return (
         <div className='relative w-full h-auto'>
-            <div className="w-full h-[85vh] max-lg:h-[75vh] ">
+            <div className="w-full h-[85vh] max-lg:h-[75vh] max-md:h-[65vh] ">
                 <img
                     className="w-full h-[100%] object-cover brightness-40"
                     src="https://res.cloudinary.com/dxe5unu0u/image/upload/v1762863097/netflix_j4wjuu.webp" alt="goflix" />
@@ -18,11 +18,11 @@ function AuthLandingPages() {
                 </div>
 
                 <div className="flex flex-col gap-5 max-xl:gap-3 h-[100%] w-[60%] max-[951px]:w-[100%] items-center m-auto justify-center">
-                    <h1 className="text-5xl  max-[951px]:text-3xl max-lg:font-medium font-bold text-center">Unlimited movies, TV shows, and more</h1>
+                    <h1 className="text-5xl  max-[951px]:text-3xl max-md:font-light max-md:text-2xl max-lg:font-medium font-bold text-center">Unlimited movies, TV shows, and more</h1>
                     <h3 className="text-1xl font-bold  max-lg:font-light">Starts at ₦2,500. Cancel anytime.</h3>
                     <p className="font-light text-center  max-lg:text-[12px]">Ready to watch? Enter your email to create or restart your membership.</p>
                     <button>
-                        <Link className="flex items-center gap-3 text-[1.5em] max-xl:text-[1.2em] max-md:text-[1em] max-xl:gap-1 font-bold max-xl:font-medium bg-[#FFD93D] px-[25px] py-[10px] rounded"> Get Started
+                        <Link className="flex items-center gap-3 text-[1.5em] max-xl:text-[1.2em] max-md:text-[.8em] max-xl:gap-1 font-bold max-xl:font-medium bg-[#FFD93D] px-[25px] py-[10px] rounded"> Get Started
                             <span><FaGreaterThan /></span></Link>
                     </button>
                 </div>
