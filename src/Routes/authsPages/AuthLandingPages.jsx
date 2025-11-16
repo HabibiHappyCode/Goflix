@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { FaGreaterThan } from "react-icons/fa6";
+import { FaGreaterThan } from "react-icons/fa6"
 
 
 function AuthLandingPages() {

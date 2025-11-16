@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { fetchingLandPageData } from '../../lib';
 import { useFetch } from '../../hooks/useFetch';
 import { FaPlay } from "react-icons/fa";

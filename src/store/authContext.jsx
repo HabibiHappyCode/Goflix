@@ -30,7 +30,7 @@ const useAuthStore = create((set) => ({
 
   logOut: (navigate) => {
     set({ user: null, isLoggedIn: false, error: null });
-    navigate("/login");
+    navigate("/");
   },
 }));
 
