@@ -10,7 +10,6 @@ export const TogggleContextProvider = ({ children }) => {
 
     const handleChangeTogggle = () => {
         setSideBarToggle(prevToggle => !prevToggle);
-        console.log('malik')
     }
 
     const ctxContext = {

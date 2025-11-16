@@ -25,7 +25,6 @@ function App() {
 
   return (
     <div className='relative' >
-      {/* navigations */}
       {(!isLoggedIn && !pathname.includes('/dashboard')) && <Routes>
         <Route path='/' element={<AuthLandingPage />} />
         <Route path='/signUp' element={<SignUp />} />
@@ -52,8 +51,6 @@ function App() {
           </Routes>
         </div>}
       </TogggleContextProvider>
-
-
     </div>
   )
 }
