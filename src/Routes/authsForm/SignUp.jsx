@@ -20,6 +20,10 @@ function SignUp() {
         navigate('/signIn')
     }
 
+    const handleGoHome = () => {
+        navigate('/')
+    }
+
     return (
         <div className=' w-full h-auto relative'>
             <div className="w-full h-[100vh] ">
@@ -31,7 +35,7 @@ function SignUp() {
 
             <section className='absolute w-full h-[95%] px-[10em] max-xl:px-[5em] max-lg:px-[2em] max-md:px-[.8em] py-[1em] top-0 left-0 '>
                 <div className="flex justify-between items-center">
-                    <h1 className='uppercase text-[2em] font-medium-bold  text-[#FFD93D] max-md:text-[1.3em]'>goflix</h1>
+                    <h1 onClick={handleGoHome} className='uppercase text-[2em] font-medium-bold  text-[#FFD93D] max-md:text-[1.3em] cursor-pointer '>goflix</h1>
 
                 </div>
 

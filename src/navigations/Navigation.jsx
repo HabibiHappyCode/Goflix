@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
 import { AiFillCaretDown } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
@@ -10,7 +10,9 @@ function Navigation() {
     const [toggleClick, setToggleClick] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-   
+    const navigate = useNavigate()
+
+
 
     const handlePageScroll = () => {
         setIsScrolled(window.pageYOffset)
@@ -24,7 +26,7 @@ function Navigation() {
         setToggleClick(prevState => !prevState)
     }
 
-   
+
 
 
 
@@ -40,10 +42,15 @@ function Navigation() {
         scrollStyle = 'bg-[#000] transition ease-in-out duration-300'
     }
 
+    const handleGoHome = () => {
+        navigate('/')
+    }
+
+
 
     return (
         <header className={`py-4 px-15 w-full flex justify-between items-center max-[768px]:px-5 fixed top-0 z-1 ${scrollStyle}`}>
-            <h1 className='uppercase text-[1.7em] font-light  text-[#FFD93D] max-md:text-[1.3em]'>goflix</h1>
+            <h1 onClick={handleGoHome} className='uppercase text-[1.7em] font-light  text-[#FFD93D] max-md:text-[1.3em] cursor-pointer'>goflix</h1>
 
             <nav className=' w-1/2 relative flex justify-center max-[768px]:justify-start'>
 
@@ -57,16 +64,16 @@ function Navigation() {
                 </p>
 
                 <ul className={styles}>
-                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100  max-[768px]:py-5'><Link to='/'>home</Link></li>
-                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/shows'>shows</Link></li>
-                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/movies'>movies</Link></li>
-                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><Link to='/news_popular'>new & popular</Link></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100  max-[768px]:py-5'><NavLink className={({ isActive }) => isActive ? 'text-[#FFD93D]' : ''} to='/'>home</NavLink></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><NavLink className={({ isActive }) => isActive ? 'text-[#FFD93D]' : ''} to='/shows'>shows</NavLink></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><NavLink className={({ isActive }) => isActive ? 'text-[#FFD93D]' : ''} to='/movies'>movies</NavLink></li>
+                    <li onClick={handleClickedCaret} className='hover:text-[#FFD93D]  transition ease-in duration-100 max-[768px]:py-5'><NavLink className={({ isActive }) => isActive ? 'text-[#FFD93D]' : ''} to='/news_popular'>new & popular</NavLink></li>
                 </ul>
             </nav>
 
             <SearchBar />
 
-          <User />
+            <User />
         </header>
     )
 }

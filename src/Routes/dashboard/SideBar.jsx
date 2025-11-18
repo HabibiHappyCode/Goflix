@@ -19,9 +19,13 @@ function SideBar() {
         logOut(navigate)
     }
 
+    const handleGoHome = () => {
+        navigate('/')
+    }
+
     return (
         <div className={`transition-all duration-500 ease-in-out  ${toggle ? 'w-15' : 'w-55'} bg-black h-[100vh] pt-[2em] px-[.8em] relative border-r-1 border-[#FFD93D]/70`}>
-            <h1 className='uppercase text-[1.7em] font-light text-[#FFD93D] text-center max-md:text-[1.3em]'>{toggle ? 'g' : 'goflix'}</h1>
+            <h1 onClick={handleGoHome} className='uppercase cursor-pointer text-[1.7em] font-light text-[#FFD93D] text-center max-md:text-[1.3em]'>{toggle ? 'g' : 'goflix'}</h1>
 
             <section className="mt-5 flex flex-col gap-1">
                 <NavLink
